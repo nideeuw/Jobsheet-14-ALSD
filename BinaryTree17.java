@@ -7,6 +7,23 @@ public class BinaryTree17 {
     public boolean isEmpty(){
         return root == null;
     }
+    public void addRekursif(Mahasiswa17 mahasiswa) {
+        root = Rekursif(root, mahasiswa);
+    }
+
+    private Node17 Rekursif(Node17 current, Mahasiswa17 mahasiswa) {
+        if (current == null) {
+            return new Node17(mahasiswa);
+        }
+
+        if (mahasiswa.ipk < current.mahasiswa.ipk) {
+            current.left = Rekursif(current.left, mahasiswa);
+        } else {
+            current.right = Rekursif(current.right, mahasiswa);
+        }
+
+        return current;
+    }
     public void add(Mahasiswa17 mahasiswa){
         Node17 newNode = new Node17(mahasiswa);
         if (isEmpty()) {
