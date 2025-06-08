@@ -195,4 +195,17 @@ public class BinaryTree17 {
         }
         return current.mahasiswa;
     }
+    public void tampilMahasiswaIPKdiAtas(double ipkBatas) {
+        tampilIPKDiAtas(root, ipkBatas);
+    }
+
+    private void tampilIPKDiAtas(Node17 node, double ipkBatas) {
+        if (node != null) {
+            tampilIPKDiAtas(node.left, ipkBatas);
+            if (node.mahasiswa.ipk > ipkBatas) {
+                node.mahasiswa.tampilInformasi();
+            }
+            tampilIPKDiAtas(node.right, ipkBatas);
+        }
+    }
 }
