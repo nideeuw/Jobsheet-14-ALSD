@@ -173,4 +173,26 @@ public class BinaryTree17 {
             }
         }
     }
+    public Mahasiswa17 cariMinIPK() {
+        if (isEmpty()) {
+            System.out.println("Tree kosong. Tidak ada data mahasiswa");
+            return null;
+        }
+        Node17 current = root;
+        while (current.left != null) {
+            current = current.left;
+        }
+        return current.mahasiswa;
+    }
+    public Mahasiswa17 cariMaxIPK() {
+        if (isEmpty()) {
+            System.out.println("Tree kosong. Tidak ada data mahasiswa");
+            return null;
+        }
+        Node17 current = root;
+        while (current.right != null) {
+            current = current.right;
+        }
+        return current.mahasiswa;
+    }
 }
