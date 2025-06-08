@@ -52,6 +52,6 @@ public class BinaryTreeMain17 {
         }
 
         System.out.println("\nMahasiswa dengan IPK di atas 3.50:");
-        tree.tampilMahasiswaIPKdiAtas(3.50);
+        bst.tampilMahasiswaIPKdiAtas(3.50);
     }
 }
